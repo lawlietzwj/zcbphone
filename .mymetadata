@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="zcbphone"
+  id="myeclipse.1400810608988"
+  context-root="/zcbphone"
+  j2ee-spec="5.0"
+  archive="zcbphone.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

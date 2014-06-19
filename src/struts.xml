@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.i18n.encoding" value="utf-8"/>
+	<constant name="struts.ui.theme" value="simple"/>
+	<constant name="struts.action.extension" value="action" />
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.action.extesion" value="do,action"></constant>
+	<package name="default" namespace="/" extends="struts-default">
+		<action name="userRole_*" method="{1}" class="com.jczcb.action.UserRoleAction">
+			<result name="successLogin">/pages/main.jsp</result>
+			<result name="error">/pages/login.jsp</result>
+		</action>
+		<action name="caseNew_*" method="{1}" class="com.jczcb.action.CaseNewAction">
+			<result name="success">/pages/case.jsp</result>
+			<result name="error">/pages/caseNew.jsp</result>
+		</action>
+		<action name="case" method="check" class="com.jczcb.action.CaseAction">
+			<result name="success">/pages/caseNotend.jsp</result>
+		</action>
+		<action name="caseNotend" method="dispose" class="com.jczcb.action.CaseNotendAction">
+			<result name="success" type="redirect">case.action</result>
+		</action>
+		<action name="caseCheck_*" method="{1}" class="com.jczcb.action.CaseCheckAction">
+			<result name="success">/pages/caseCheck.jsp</result>
+		</action>
+		<action name="carCheck" method="check" class="com.jczcb.action.CarCheckAction">
+			<result name="success">/pages/carCheck.jsp</result>
+		</action>
+		<action name="driverCheck" method="check" class="com.jczcb.action.DriverCheckAction">
+			<result name="success">/pages/driverCheck.jsp</result>
+		</action>
+		<action name="weightCheck" method="check" class="com.jczcb.action.WeightCheckAction">
+			<result name="success">/pages/weightCheck.jsp</result>
+		</action>
+		
+	</package>
+</struts>
