@@ -13,8 +13,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
 <link rel="stylesheet" href="<%=path %>/images/boc2013_boc.css"/>
-<script type="text/javascript" src="<%=path %>/js/jquery-1.4.2.min.js"/>
-<script type="text/javascript"> 
+<script type="text/javascript" src="<%=path %>/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
 //浮动按钮事件，.scroll 获取滚动条垂直距离
  $(window).scroll(function(){   
   	var top = $(window).scrollTop();
@@ -27,8 +27,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    });
 </script> 
 
-	<title>晋城市治理超限超载信息平台</title>
-		
+<title>晋城市治理超限超载信息平台</title>
+	
 </head>
 <body>
 <div id="header" class="page_header">
@@ -72,7 +72,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
      	<p>归属地：${car.ownerLandName }</p>
      	</li>
      	</c:forEach>
-            
+        <!-- 返回顶部浮动按钮 -->
+     	<div id="to_top" style="right:10%;position:absolute;display:none">
+     	<a id="to_top" href="#">
+     	  <img style="width:30px;height:30px" src="<%=path %>/images/top.png" alt="返回顶部"></img>
+     	</a></div>    
      </ul>
      </div>
      </c:when>
@@ -82,11 +86,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	</div>
      </c:otherwise>
      </c:choose>
-          	<!-- 返回顶部浮动按钮 -->
-     	<div id="to_top" style="right:10%;position:absolute;display:none">
-     	<a id="to_top" href="#">
-     	  <img style="width:30px;height:30px" src="<%=path %>/images/top.png" alt="返回顶部"></img>
-     	</a></div>    
   </div>
 </div>
 </body>

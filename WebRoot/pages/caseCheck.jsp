@@ -67,7 +67,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
      	<p>超载限量：${olCase.quantity}</p>
      	<p>案件类型：<c:if test="${olCase.caseType==1}">超载</c:if><c:if test="${olCase.caseType==2}">超限</c:if></p>
      	<p>发生日期：<fmt:formatDate value="${olCase.date}" type="both"/></p>
-     	<p>案件进度：<c:if test="${olCase.status==1}"><span style="color:red">处理中</span></c:if><c:if test="${olCase.status==0}"><span style="color:green">已结案</span></c:if></p>
+     	<p>案件进度：<c:if test="${olCase.status==1}"><span style="color:red">处理中</span></c:if><c:if test="${olCase.status==0}"><span style="color:rgb(83, 255, 20)">已结案</span></c:if></p>
      	<p>录入交警：${olCase.addRole }</p>
      	<c:if test="${olCase.status==0}">
      	<p>处理交警：${olCase.delRole }</p>

@@ -37,7 +37,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <p class="wrap"><img src="<%=path %>/images/boc2013_notice_icon.png"><a href="#">关于网上服务升级的公告</a></p>
     </div>
     <!--公告内容end-->
-    <div id="" class="boc_main" tabindex="0">
+    <div id="" class="boc_main" tabindex="0" style="padding-top:15px">
       <div class="boc_content"> 
         <!-- 手机银行功能模块 -->
         <div class="common_box">
