@@ -14,10 +14,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script type="text/javascript" src="<%=path %>/js/jquery-1.4.2.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
+		var carNumber=/^[\u4e00-\u9fa5]{1}[A-Z]{1}[\dA-Z]{5}$/;
+		var driverNumber=/(^\d{15}$)|(^\d{18}$)|(^\d{17}x$)/;
+		var quantity=/(^[1-9][0-9]{0,2}\.[0-9]{2}$)|(^0\.[0-9][1-9]$)|(^0\.[1-9][0-9]$)/;
+	
 		$(".add_btn").click(function(){
-			var carNumber=/^[\u4e00-\u9fa5]{1}[A-Z]{1}[\dA-Z]{5}$/;
-			var driverNumber=/(^\d{15}$)|(^\d{18}$)|(^\d{17}x$)/;
-			var quantity=/(^[1-9][0-9]{0,2}\.[0-9]{2}$)|(^0\.[0-9][1-9]$)|(^0\.[1-9][0-9]$)/;
 			$(".warning").text("");
 			if($("#SS").val()=="" || $("#SS").val()==0){
 				$("#case_type").text("请选择案件类型");
@@ -30,6 +31,30 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			}else{
 			alert("增加成功！");
 			caseForm.submit();
+			}
+		});
+		
+		$("#carNumber").blur(function(){
+		    if($("#carNumber").val()=="" || !carNumber.test($("#carNumber").val())){
+				$("#car_number").text("请输入正确的车牌号(例：晋A12345)");
+			}else{
+				$("#car_number").text("");
+			}
+		});
+		
+		$("#driverNumber").blur(function(){
+			if($("#driverNumber").val()=="" || !driverNumber.test($("#driverNumber").val())){
+				$("#driver_number").text("请输入正确的驾驶证号");
+			}else{
+				$("#driver_number").text("");
+			}
+		});
+		
+		$("#quantity").blur(function(){
+			if($("#quantity").val()=="" || !quantity.test($("#quantity").val())){
+				$("#quantity_").text("请输入正确的超限超载量，保留两位小数。");
+			}else{
+				$("#quantity_").text("");
 			}
 		});
 	});

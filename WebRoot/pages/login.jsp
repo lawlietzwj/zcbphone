@@ -48,7 +48,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <p class="wrap"><img src="images/boc2013_notice_icon.png">关于网上服务升级的公告</p>
     </div>
     <!--公告内容end-->
-    <div id="" class="boc_main" tabindex="0">
+    <div id="" class="boc_main" tabindex="0" style="padding-top:15px">
       <div class="boc_content"> 
         <div class="common_box">
           <h3 class="title">手机平台</h3>

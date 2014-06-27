@@ -13,11 +13,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
 <link rel="stylesheet" href="<%=path %>/images/boc2013_boc.css"/>
 <title>晋城市治理超限超载信息平台</title>
-
+<style type="text/css">
+/* 按钮触发背景色  */
+#info a:hover{
+	color: white;
+	background-color: rgba(45, 213, 53, 0.8);
+}
+#work a:hover{
+	color: white;
+	background-color: rgba(56, 110, 242, 0.6);
+}
+</style>
 </head>
 
 <body>
-
 <div id="wrapper">
   <div id="boc_index" class="boc_index"> 
     <!-- 头部 begin -->
@@ -37,14 +46,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <p class="wrap"><img src="<%=path %>/images/boc2013_notice_icon.png"><a href="#">关于网上服务升级的公告</a></p>
     </div>
     <!--公告内容end-->
-    <div id="" class="boc_main" tabindex="0">
+    <div id="" class="boc_main" tabindex="0" style="padding-top:15px">
       <div class="boc_content"> 
         <!-- 手机银行功能模块 -->
         <div class="common_box">
 					<h3 class="title">手机平台</h3>
 					<div class="box1 box">
 						<p class="title">信息查询</p>
-						<ul class="clearfix">
+						<ul id="info" class="clearfix">
 						
 							<li><a href="<%=basePath%>pages/carCheck.jsp">车辆查询</a></li>
 						
@@ -58,7 +67,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					
 					<div class="box3 box">
 						<p class="title">在线办公</p>
-						<ul class="clearfix">
+						<ul id="work" class="clearfix">
 						
 							<li><a href="<%=basePath%>pages/case.jsp">案件处理</a></li>
 						

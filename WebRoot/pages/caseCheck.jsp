@@ -22,7 +22,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		$("#to_top").css("display","none");
   	}else{
   		$("#to_top").css("display","");
-  		$("#to_top").css("top", top+300);
   	}
    });
 </script> 
@@ -67,7 +66,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
      	<p>超载限量：${olCase.quantity}</p>
      	<p>案件类型：<c:if test="${olCase.caseType==1}">超载</c:if><c:if test="${olCase.caseType==2}">超限</c:if></p>
      	<p>发生日期：<fmt:formatDate value="${olCase.date}" type="both"/></p>
-     	<p>案件进度：<c:if test="${olCase.status==1}"><span style="color:red">处理中</span></c:if><c:if test="${olCase.status==0}"><span style="color:green">已结案</span></c:if></p>
+     	<p>案件进度：<c:if test="${olCase.status==1}"><span style="color:red">处理中</span></c:if><c:if test="${olCase.status==0}"><span style="color:rgb(83, 255, 20)">已结案</span></c:if></p>
      	<p>录入交警：${olCase.addRole }</p>
      	<c:if test="${olCase.status==0}">
      	<p>处理交警：${olCase.delRole }</p>
@@ -75,7 +74,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
      	</li>
      	</c:forEach>
      	<!-- 返回顶部浮动按钮 -->
-     	<div id="to_top" style="right:10%;position:absolute;display:none">
+     	<div id="to_top" style="right:10%;bottom:10%;position:fixed;display:none">
      	<a id="to_top" href="#">
      	  <img style="width:30px;height:30px" src="<%=path %>/images/top.png" alt="返回顶部"></img>
      	</a>

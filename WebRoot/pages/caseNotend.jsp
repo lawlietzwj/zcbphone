@@ -24,11 +24,23 @@
   		$("#to_top").css("display","none");
   	}else{
   		$("#to_top").css("display","");
-  		$("#to_top").css("top", top+300);
   	}
    });
 </script> 
-
+<style type="text/css">
+  .sub-button{
+    cursor:pointer;
+    border:1px solid #CCC;
+    border-radius:3px;
+    text-align:center;
+    height:26px;
+    width:30%;
+    margin-left:24%;
+    margin-top:1%;
+    background-image:linear-gradient(#FFF, #F3F3F3);
+    color:rgb(83, 255, 20);
+  }
+</style>
 <title>晋城市治理超限超载信息平台</title>
 </head>
 
@@ -45,7 +57,7 @@
      <ul class="list" id="PL_DOCUMENT_LIST">
      <p style="text-align:center;color:red">待处理案件  ${fn:length(caseList)} 件</p>
      <c:forEach items="${caseList}" var="olCase">
-      <s:form id="dispose" name="dispose" method="post" action="caseNotend.action">
+     <s:form id="dispose" name="disposeForm" method="post" action="caseNotend.action">
      <div style="margin-left:6%">
      <li>
 		<input id="disposeid" name="disposeid" style="display:none" value="${olCase.id}"/>
@@ -54,7 +66,7 @@
      	<p>超载限量：${olCase.quantity}</p>
      	<p>案件类型：<c:if test="${olCase.caseType==1}">超载</c:if><c:if test="${olCase.caseType==2}">超限</c:if></p>
      	<p>发生日期：<fmt:formatDate value="${olCase.date}" type="both"/></p>
-     	<s:submit value="处理"></s:submit>
+     	<input class="sub-button" type="submit" value="处&nbsp&nbsp理"/>
      </li>
      </div>
      </s:form>
@@ -69,7 +81,7 @@
   </div>
 </div>
 		<!-- 返回顶部浮动按钮 -->
-     	<div id="to_top" style="right:10%;position:absolute">
+     	<div id="to_top" style="right:10%;bottom:10%;position:fixed;display:none">
      	<a id="to_top" href="#">
      	  <img style="width:30px;height:30px" src="<%=path %>/images/top.png" alt="返回顶部"></img>
      	</a></div>

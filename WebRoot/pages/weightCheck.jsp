@@ -40,7 +40,6 @@ $(function() {
   		$("#to_top").css("display","none");
   	}else{
   		$("#to_top").css("display","");
-  		$("#to_top").css("top", top+300);
   	}
    });
 //下拉框选择
@@ -121,7 +120,7 @@ $(document).ready(function(){
      </c:otherwise>
      </c:choose>
           	<!-- 返回顶部浮动按钮 -->
-     	<div id="to_top" style="right:10%;position:absolute;display:none">
+     	<div id="to_top" style="right:10%;bottom:10%;position:fixed;display:none">
      	<a id="to_top" href="#">
      	  <img style="width:30px;height:30px" src="<%=path %>/images/top.png" alt="返回顶部"></img>
      	</a></div>
