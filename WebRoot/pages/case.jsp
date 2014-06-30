@@ -15,6 +15,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
 		<link rel="stylesheet" href="<%=path %>/images/boc2013_boc.css"/>		
 		<title>晋城市治理超限超载信息平台</title>
+		<style type="text/css">
+			/* 按钮触发背景色  */
+			a.add:hover{
+				color: white;
+				background-color: rgba(255, 18, 0, 0.6);
+			}			
+			a.notend:hover{
+				color: white;
+				background-color: rgba(45, 213, 53, 0.8);
+			}
+			a.check:hover{
+				color: white;
+				background-color: rgba(56, 110, 242, 0.6);
+			}
+</style>
 	</head>
 
 	<body>
@@ -42,15 +57,15 @@
 								<ul class="clearfix">
 
 									<li>
-										<a href="caseNew.jsp">新增</a>
+										<a class="add" href="caseNew.jsp">新增</a>
 									</li>
 
 									<li>
-										<a style="cursor:pointer" onclick="caseForm.action='case.action';caseForm.submit()">处理</a>
+										<a class="notend" style="cursor:pointer" onclick="caseForm.action='case.action';caseForm.submit()">处理</a>
 									</li>
 
 									<li>
-										<a href="caseCheck.jsp">案件查询</a>
+										<a class="check" href="caseCheck.jsp">案件查询</a>
 									</li>
 								</ul>
 							</div>

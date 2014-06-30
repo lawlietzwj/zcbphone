@@ -7,8 +7,13 @@ html, body, header, footer, nav, article, section, aside, time, code, div, p, ul
 
 /* 输入框点击阴影  */
 input:focus,textarea:focus,select:focus{
+	/*
 	border-color: rgba(82, 168, 236, 0.8);
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(82, 168, 255, 0.6);
+	*/
+	border-color: rgba(82, 168, 236, 0.6);
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.03) inset, 0px 0px 8px rgba(102, 255, 255, 1);
+	
 }
 
 p.warning {text-align:center; color:red}

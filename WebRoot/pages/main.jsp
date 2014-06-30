@@ -30,7 +30,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div id="wrapper">
   <div id="boc_index" class="boc_index"> 
     <!-- 头部 begin -->
-    <header class="home_header">
+    <div class="home_header">
       <div class="wrap clearfix">
         <section> <img class="logo" src="<%=path %>/images/boc2013_logo.png">
           <div class="home_header_nav">
@@ -39,11 +39,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           </div>
         </section>
       </div>
-    </header>
+    </div>
     <!-- 头部 end --> 
     <!--公告内容-->
     <div class="home_header_news">
-      <p class="wrap"><img src="<%=path %>/images/boc2013_notice_icon.png"><a href="#">关于网上服务升级的公告</a></p>
+      <p class="wrap"><img src="<%=path %>/images/boc2013_notice_icon.png"/><a href="#">关于网上服务升级的公告</a></p>
     </div>
     <!--公告内容end-->
     <div id="" class="boc_main" tabindex="0" style="padding-top:15px">
@@ -85,10 +85,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </div>
     <!--boc_main--> 
     <!-- footer begin -->
-    <footer class="footer_info">
+    <div class="footer_info">
       <p>服务热线 <span class="red"></span><span class="red">2057168</span></p>
       <p class="footer_border">晋ICP证 060399 号</p>
-    </footer>
+    </div>
     <!-- footer end --> 
   </div>
 </div>

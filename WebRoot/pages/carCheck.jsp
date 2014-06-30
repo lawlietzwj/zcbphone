@@ -26,16 +26,27 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    });
 </script> 
 <style type="text/css">
-/* 按钮旋转  */
-	p.clearfix:hover{
-    	animation:btnRptate 0.6s;
+	.search_btn{
+
+	}
+	/* 按钮旋转  */
+	.search_btn:hover{
+		/* 圆角边框  */
+		border-radius:100px;
+		/* 辐射渐变  */
+		background-image: radial-gradient(ellipse farthest-corner at 140px 24px , #00FFFF 0%, white 26%, yellow 100%);
+		/* 线性渐变	
+		第一个属性是渐变线角度（X轴正方向为0deg）
+		颜色属性后面的百分号：起始结束颜色（颜色所占百分比）中间颜色（颜色开始位置）
+		background: linear-gradient(90deg,red,yellow 30%,green);*/
+		/* 添加动画 */
+    	animation: btnRptate 0.1s linear 0s infinite normal;
 	}
 	@keyframes btnRptat{
 		from {transform: rotateZ(0deg);}
 		to {transform: rotateZ(360deg);}
 	}
 
-<<<<<<< HEAD
 	@-moz-keyframes btnRptate /* Firefox */{
 		from {-moz-transform: rotateZ(0deg);}
 		to {-moz-transform: rotateZ(360deg);}
@@ -47,8 +58,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	}
 </style>
 
-=======
->>>>>>> 54e180b1f69e078b9f911b2f3aae22c409de2122
 <title>晋城市治理超限超载信息平台</title>
 	
 </head>
@@ -95,14 +104,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
      	</li>
      	</c:forEach>
         <!-- 返回顶部浮动按钮 -->
-<<<<<<< HEAD
      	<div id="to_top" style="right:10%;bottom:10%;position:fixed;display:none">
-=======
-     	<div id="to_top" style="right:10%;position:absolute;display:none">
->>>>>>> 54e180b1f69e078b9f911b2f3aae22c409de2122
      	<a id="to_top" href="#">
      	  <img style="width:30px;height:30px" src="<%=path %>/images/top.png" alt="返回顶部"></img>
-     	</a></div>    
+     	</a>
+     	</div>    
      </ul>
      </div>
      </c:when>
