@@ -35,6 +35,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		to {transform: rotateZ(360deg);}
 	}
 
+<<<<<<< HEAD
 	@-moz-keyframes btnRptate /* Firefox */{
 		from {-moz-transform: rotateZ(0deg);}
 		to {-moz-transform: rotateZ(360deg);}
@@ -46,6 +47,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	}
 </style>
 
+=======
+>>>>>>> 54e180b1f69e078b9f911b2f3aae22c409de2122
 <title>晋城市治理超限超载信息平台</title>
 	
 </head>
@@ -92,7 +95,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
      	</li>
      	</c:forEach>
         <!-- 返回顶部浮动按钮 -->
+<<<<<<< HEAD
      	<div id="to_top" style="right:10%;bottom:10%;position:fixed;display:none">
+=======
+     	<div id="to_top" style="right:10%;position:absolute;display:none">
+>>>>>>> 54e180b1f69e078b9f911b2f3aae22c409de2122
      	<a id="to_top" href="#">
      	  <img style="width:30px;height:30px" src="<%=path %>/images/top.png" alt="返回顶部"></img>
      	</a></div>    
