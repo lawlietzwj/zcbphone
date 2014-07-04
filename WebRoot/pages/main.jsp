@@ -14,12 +14,30 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <link rel="stylesheet" href="<%=path %>/images/boc2013_boc.css"/>
 <title>晋城市治理超限超载信息平台</title>
 <style type="text/css">
+#black{
+	transition-property: width, margin-left, border-radius, transform;
+	transition-duration: 1s;
+}
+#work:hover #black{
+	width: 30px;
+	height: 30px;
+	margin-left: 50%;
+	border-style: solid;
+	border-radius: 54px;
+	border-color: yellow;
+	border-width: 3px;
+	transform: rotate(360deg);
+	background-color: rgba(231, 26, 26, 0.8);
+}
+#work:hover #black a{
+	color: white;
+}
 /* 按钮触发背景色  */
-#info a:hover{
+#info li:hover{
 	color: white;
 	background-color: rgba(45, 213, 53, 0.8);
 }
-#work a:hover{
+#work li:hover{
 	color: white;
 	background-color: rgba(56, 110, 242, 0.6);
 }
@@ -71,8 +89,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						
 							<li><a href="<%=basePath%>pages/case.jsp">案件处理</a></li>
 						
-							<li><a href="<%=basePath%>pages/blackList.jsp">黑名单</a></li>
-						
+							<li id="black">
+							  <a href="<%=basePath%>pages/blackList.jsp">黑名单</a>
+							</li>
+				
 							<!--li><a href="case_up.html">超载上报</a--></li>
 						
 						</ul>

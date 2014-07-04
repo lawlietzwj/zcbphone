@@ -24,7 +24,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		$("#to_top").css("display","");
   	}
    });
-</script> 
+</script>
+<!-- 
 <style type="text/css">
 	.search_btn{
 
@@ -57,7 +58,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		to {-webkit-transform: rotateZ(360deg);}
 	}
 </style>
-
+-->
 <title>晋城市治理超限超载信息平台</title>
 	
 </head>
